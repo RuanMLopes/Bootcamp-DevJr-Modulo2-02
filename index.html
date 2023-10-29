@@ -10,43 +10,116 @@
     <style>
         body {
             background-color: #CCCCCC;
+            align-items: center;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         button {
             background-color: #1D0C20;
             color: #FFF;
+            font-size: 1rem;
+        }
+
+        input {
+            width: 70%;
+            height: 4px;
+            padding: 0.9375rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 0;
+            margin: 13px;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 10px #009E9E;
         }
 
         .container {
             background-color: #1F0C22;
+            margin: auto;
+            width: 600px;
+
             color: #FFF;
+
+            border-radius: 5px;
+            overflow: hidden;
+
+            padding: 1.5rem;
+        }
+
+        .flex-container {
+            background-color: #621E6E;
+            margin-top: 2rem;
+            border-radius: 5px;
         }
 
         .header {
             color: #FECD23;
+            font-size: 1.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
         }
 
-        .header-voting {
-            background-color: #621E6E;
+        .header-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
         }
 
-        .option {
-            background-color: #2637DA;
+        .header-text {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
         }
 
-        .option-separate {
-            background-color: #3D5DEF;
+        .sub-header {
+            display: flex;
+            flex-direction: row;
+            padding: 15px 20px;
         }
 
-        <style>.material-symbols-outlined {
+        #esporte {
+            background-color: #3E5EEF;
+            font-size: 1.25rem;
+
+            border: #2637DA;
+            border-radius: 5px;
+
+            float: left;
+            width: 25%;
+        }
+
+        #simulacao {
+            background-color: #3E5EEF;
+            font-size: 1.25rem;
+            height: 200px;
+
+            border: #2637DA;
+            border-radius: 5px;
+
+            float: middle;
+            width: 25%;
+        }
+
+        #estrategia {
+            background-color: #3E5EEF;
+            font-size: 1.25rem;
+
+            border: #2637DA;
+            border-radius: 5px;
+
+            float: right;
+            width: 25%;
+        }
+
+        .material-symbols-outlined {
             font-variation-settings:
                 'FILL' 0,
                 'wght' 400,
                 'GRAD' 0,
-                'opsz' 84px !important;
+                'opsz' 24;
+            font-size: 5rem !important;
         }
-    </style>
-
     </style>
 </head>
 
@@ -55,47 +128,65 @@
         <div class="header">
             GAMES LOVERS ENQUETE
         </div>
-        <div>
+        <div class="header-text">
             Estamos escolhendo nessa enquete os melhores estilos de jogos entre os afixionados por video games.
             Participe da nossa enquete e escolha entre os três finalistas!
         </div>
-        <div>
+        <div class="header-text">
             A sua escolha é muito importante para nós.
         </div>
-        <div>
+        <div class="header-text">
             No final da enque iremos sortear um brinde entre os participantes.
         </div>
-        <div class="header-voting">
-            Digite os seus dados e escolha entre os três finalistas!
-            <input type="text" placeholder="Digite seu nome" />
-            <input type="text" placeholder="Digite seu email" />
-            <div class="option">
-                <div class="option-separate">
+        <div class="flex-container">
+            <div class="header-subtitle">
+                Digite os seus dados e escolha entre os três finalistas!
+            </div>
+            <div>
+                <input type="text" placeholder="Digite seu nome" />
+            </div>
+            <div>
+                <input type="text" placeholder="Digite seu email" />
+            </div>
+            <div class="sub-header">
+                <div id="esporte">
+                    <div>
+                        Esportes
+                    </div>
                     <link rel="stylesheet"
                         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
                     <span class="material-symbols-outlined">
                         sports_soccer
                     </span>
-                    Esportes
-                    <button>Votar</button>
+                    <div>
+                        <button>Votar</button>
+                    </div>
                 </div>
-                <div class="option-separate">
+                <div id="simulacao">
+                    <div>
+                        Simulação
+                    </div>
                     <link rel="stylesheet"
                         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
                     <span class="material-symbols-outlined">
                         flight
                     </span>
-                    Simulação
-                    <button>Votar</button>
+                    <div>
+                        <button>Votar</button>
+                    </div>
                 </div>
-                <div class="option-separate">
+                <div id="estrategia">
+                    <div>
+                        Estratégia
+                    </div>
                     <link rel="stylesheet"
                         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-                    <span class="material-symbols-outlined">
+                    <div class="material-symbols-outlined">
                         psychology
-                    </span>
-                    Estratégia
-                    <button>Votar</button>
+                    </div>
+                    <div>
+                        <button>Votar</button>
+                    </div>
                 </div>
             </div>
         </div>
